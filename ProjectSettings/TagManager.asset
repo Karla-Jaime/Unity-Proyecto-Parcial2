@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - robot
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: robot
+    uniqueID: 1281609565
+    locked: 0
+  - name: terreno
+    uniqueID: 1193667087
     locked: 0
