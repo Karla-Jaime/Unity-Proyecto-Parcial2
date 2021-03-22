@@ -6,11 +6,15 @@ public class TestMineral : MonoBehaviour
 {
     [SerializeField]
     Mineral mineral;    
-    private void OnTriggerEnter2D(Collider2D other) {
+
+    private void OnCollisionEnter(Collision collision) 
+    {
+        Collider other = collision.collider;
         if (other.CompareTag("Player"))
         {
+            Debug.Log("IIIIIIIIIIIIOOO");
             PlayerMovement player = other.GetComponent<PlayerMovement>();
-            mineral.Pickup(player);
+            mineral.Analyze(player);
             Destroy(gameObject);
 
             //player.HealPlayer();

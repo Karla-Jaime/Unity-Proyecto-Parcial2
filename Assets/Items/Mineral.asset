@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4427f0226be60254392af1ea844440ce, type: 3}
   m_Name: Mineral
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
   objectName: Mineral
+  description: aeae
   soundEffect: {fileID: 0}

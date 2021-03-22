@@ -6,10 +6,20 @@ using UnityEngine;
 public class Mineral : ItemObject 
 {
     [SerializeField]
+    string description;
+    [SerializeField]
     AudioClip soundEffect;
-    public void Pickup(PlayerMovement player)
+    public void Analyze(PlayerMovement player)
     {
         Vector3 playerPosition = player.transform.position;
-        AudioSource.PlayClipAtPoint(soundEffect, playerPosition, 1f);
+        if (soundEffect != null)
+        {
+            AudioSource.PlayClipAtPoint(soundEffect, playerPosition, 1f);
+        }
+
+        if (player.uiText != null && description != null)
+        {
+            player.uiText.text = description;
+        }
     }
 }
