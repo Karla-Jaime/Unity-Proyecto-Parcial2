@@ -7,10 +7,10 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
 
-	Item item;	// Objeto en el inventario
+	Mineral item;	// Objeto en el inventario
 
 	// Agregar objeto al inventario
-	public void AddItem (Item newItem)
+	public void AddItem (Mineral newItem)
 	{
 		item = newItem;
 
@@ -18,12 +18,9 @@ public class InventorySlot : MonoBehaviour
 		icon.enabled = true;
 	}
 
-	// Usar objeto
-	public void UseItem ()
-	{
-		if (item != null)
-		{
-			item.Use();
-		}
+	public void ClearSlot(){
+		item = null;
+		icon.sprite = null;
+		icon.enabled = false;
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestMineral : MonoBehaviour
 {
     [SerializeField]
-    Mineral mineral;    
+    Mineral mineral;
 
     private void OnCollisionEnter(Collision collision) 
     {
@@ -14,8 +14,9 @@ public class TestMineral : MonoBehaviour
         {
             Debug.Log("IIIIIIIIIIIIOOO");
             PlayerMovement player = other.GetComponent<PlayerMovement>();
-            mineral.Analyze(player);
+            Inventory.instance.Add(mineral);
             Destroy(gameObject);
+        
 
             //player.HealPlayer();
         }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ItemObject : ScriptableObject 
 {
-    //[SerializeField]
-    //Sprite icon;
+    [SerializeField]
+    public Sprite icon = null;
     
     [SerializeField]
     protected string objectName = "Mineral";

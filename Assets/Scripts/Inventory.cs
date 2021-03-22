@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+        Debug.Log("Inventory instance");
     }
     #endregion
 
@@ -27,13 +28,15 @@ public class Inventory : MonoBehaviour
 
 
     // Lista de objetos
-    public List<Item> items = new List<Item>();
+    public List<Mineral> items = new List<Mineral>();
 
     // Funcion para agregar objetos, bool para poder checar si un objeto se ouede agregar antes de destruirlo desde otro script
-    public bool Add(Item item){
+    public void Add(Mineral item){
+        
+        Debug.Log("Added " + item.name);
         if(items.Count >= inventorySpace){
             Debug.Log("Not enough room");
-            return false;
+            return;
         }
         // Agregar objeto
         items.Add(item);
@@ -42,6 +45,5 @@ public class Inventory : MonoBehaviour
         if(onItemChangedCallback != null){
             onItemChangedCallback.Invoke();
         }
-        return true;
     }
 }

@@ -23,17 +23,23 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion currentRotation;
 
     public Text uiText;
+    
+    public GameObject inventoryUI;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
         inputActions = new PlayerInput();
         inputActions.Player.Movement.performed += context => movementInput = context.ReadValue<Vector2>();
+        inputActions.Player.Inventory.performed += context => Inventory();
     }
 
+    void Start(){
+        inventoryUI.SetActive(!inventoryUI.activeSelf);
+    }
+    
     void FixedUpdate()
     {
-
         float h = movementInput.x;
         float v = movementInput.y;
 
@@ -78,6 +84,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             transform.rotation = currentRotation;
+    }
+
+    void Inventory(){
+        inventoryUI.SetActive(!inventoryUI.activeSelf);
     }
         
         private void OnEnable()
