@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     
     public GameObject inventoryUI;
+    public GameObject alertUI;
+    private Coroutine currentCoroutine;
 
     void Awake()
     {
@@ -100,4 +102,21 @@ public class PlayerMovement : MonoBehaviour
         {
             inputActions.Disable();
         }
+
+    public void ShowAlertForSeconds(float seconds)
+    {
+        alertUI.SetActive(true);
+        if (currentCoroutine != null)
+        {
+            StopCoroutine(currentCoroutine);
+        }
+        
+        currentCoroutine = StartCoroutine(HideAlertUIAfterSeconds(seconds));
+    }
+
+    IEnumerator HideAlertUIAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        alertUI.SetActive(false);
+    }
 }

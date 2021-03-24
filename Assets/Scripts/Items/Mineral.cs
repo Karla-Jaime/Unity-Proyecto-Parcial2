@@ -28,5 +28,7 @@ public class Mineral : ItemObject
         {
             player.descriptionText.text = description;
         }
+
+        player.ShowAlertForSeconds(10f);
     }
 }

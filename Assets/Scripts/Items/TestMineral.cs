@@ -12,7 +12,6 @@ public class TestMineral : MonoBehaviour
         Collider other = collision.collider;
         if (other.CompareTag("Player"))
         {
-            Debug.Log("IIIIIIIIIIIIOOO");
             PlayerMovement player = other.GetComponent<PlayerMovement>();
             Inventory.instance.Add(mineral);
             Destroy(gameObject);
