@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Quaternion currentRotation;
 
-    public Text uiText;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI descriptionText;
     
     public GameObject inventoryUI;
 

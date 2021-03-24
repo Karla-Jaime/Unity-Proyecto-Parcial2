@@ -6,6 +6,8 @@ using UnityEngine;
 public class Mineral : ItemObject 
 {
     [SerializeField]
+    string title;
+    [SerializeField]
     string description;
     [SerializeField]
     AudioClip soundEffect;
@@ -17,9 +19,14 @@ public class Mineral : ItemObject
             AudioSource.PlayClipAtPoint(soundEffect, playerPosition, 1f);
         }
 
-        if (player.uiText != null && description != null)
+        if (player.titleText != null && title != null)
         {
-            player.uiText.text = description;
+            player.titleText.text = title;
+        }
+
+        if (player.descriptionText != null && description != null)
+        {
+            player.descriptionText.text = description;
         }
     }
 }
