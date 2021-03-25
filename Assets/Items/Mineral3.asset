@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4427f0226be60254392af1ea844440ce, type: 3}
-  m_Name: Mineral
+  m_Name: Mineral3
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 100e4fdb3dea6ff49a0a0c764c634feb, type: 3}
+  icon: {fileID: 21300000, guid: 5f1ab6e69aa7fc247bab2736e81c763c, type: 3}
   objectName: Mineral
   title: Mineral Recolectado
-  description: "Composici\xF3n: Hierro 78% N\xEDquel 20%, camacita 1%, taenita 1%"
+  description: "Composici\xF3n: 93% de hierro, 7% de n\xEDquel, vestigios de germanio. "
   soundEffect: {fileID: 0}

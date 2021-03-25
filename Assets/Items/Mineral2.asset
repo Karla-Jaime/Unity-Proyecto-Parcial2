@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4427f0226be60254392af1ea844440ce, type: 3}
   m_Name: Mineral2
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 6c6714c851a94824299a339c4a11c4df, type: 3}
+  icon: {fileID: 21300000, guid: 5f2c13138750bd649b9dd73dfcf8454c, type: 3}
   objectName: Mineral
-  description: Mineral 2
+  title: Mineral Recolectado
+  description: 'Material: Conglomerado de grava con guijarros redondeados, lisos
+    y erosionados.'
   soundEffect: {fileID: 0}
